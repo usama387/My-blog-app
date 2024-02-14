@@ -22,23 +22,17 @@ interface Props {
 export const revalidate = 30;
 
 //Fetching single current slug through generateStaticParams through server side rendering which is very efficient and loads the post instantly
-export const getStaticPaths = async () => {
+export const getStaticParams = async () => {
   const query = groq`*[_type == 'post']{
     slug
   }`;
 
   // the slugs contain post data array with type definition POST[] defined in types.ts file
   const slugs: Post[] = await client.fetch(query);
-  // now mapping slug routes
-  const paths = slugs.map((slug) => ({
-    params: {
-      slug: slug?.slug?.current,
-    },
+  const slugRoutes = slugs.map((slug) => slug?.slug?.current);
+  return slugRoutes?.map((slug) => ({
+    slug,
   }));
-  return {
-    paths,
-    fallback: false,
-  };
 };
 
 // Define the SlugPage component
