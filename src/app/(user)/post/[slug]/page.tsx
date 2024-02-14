@@ -22,7 +22,7 @@ interface Props {
 export const revalidate = 30;
 
 //Fetching single current slug through generateStaticParams through server side rendering which is very efficient and loads the post instantly
-export const getStaticParams = async () => {
+export const generateStaticParams = async () => {
   const query = groq`*[_type == 'post']{
     slug
   }`;
