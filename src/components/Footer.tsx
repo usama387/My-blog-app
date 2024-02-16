@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Footer() {
   return (
     <footer className="text-[#221577] body-font">
       <div className="container px-5 py-8 mx-auto flex flex-wrap flex-col items-center">
-        <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <Link href={'/'} className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -17,18 +18,18 @@ function Footer() {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span className="ml-3 text-xl">THE BLOG</span>
-        </div>
-        <p className="text-sm text-[#221577] mt-2 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-200 md:py-2 md:mt-0">
+          <span className="ml-3 text-xl font-bold text-[#533FD7]">THE BLOG</span>
+        </Link>
+        <p className="text-sm text-[#533FD7] mt-2 md:ml-4 md:pl-4 md:border-l-2 md:border-gray-200 md:py-2 md:mt-0">
           © 2024 THE BLOG —
-          <a
-            href="https://twitter.com/knyttneve"
-            className="text-gray-600 ml-1"
+          <Link
+            href="https://twitter.com/RazaaqUsama"
+            className="text-[#533FD7] ml-1"
             rel="noopener noreferrer"
             target="_blank"
           >
             @USAMA RAZAAQ
-          </a>
+          </Link>
         </p>
         <span className="inline-flex mt-4 justify-center sm:justify-start">
           <a className="text-[#221577] ml-3">

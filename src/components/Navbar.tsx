@@ -7,6 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi"; // FiX for close icon
 
 const navigation = [
   { title: "Home", href: "/", id: 1 },
+  { title: "Features", href: "/features", id: 2 },
   { title: "About me", href: "/about", id: 3 },
   { title: "Studio", href: "/studio", id: 4 },
 ];
