@@ -1,18 +1,18 @@
-'use client';
+"use client"
 import React, { useState } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi"; // FiX for close icon
 
+
 const navigation = [
   { title: "Home", href: "/", id: 1 },
-  { title: "Features", href: "/features", id: 2 },
   { title: "About me", href: "/about", id: 3 },
   { title: "Studio", href: "/studio", id: 4 },
 ];
 
 const Navbar = () => {
-  // useState to mange to check is isMenuOpen
+  // Managing state for the mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         {/* Nav links */}
-        <div className={`md:flex items-center gap-7 text-[#54F3A6] ${isMenuOpen ? "flex" : "hidden"}`}>
+        <div className={`md:flex flex-col md:flex-row items-center gap-7 text-[#54F3A6] ${isMenuOpen ? "" : "hidden"}`}>
           {navigation.map((item) => (
             <Link
               href={item.href}
