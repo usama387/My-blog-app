@@ -7,7 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi"; // FiX for close icon
 
 const navigation = [
   { title: "Home", href: "/", id: 1 },
-  { title: "Features", href: "/features", id: 2 },
+  { title: "Contact", href: "/contact", id: 2 },
   { title: "About me", href: "/about", id: 3 },
   { title: "Studio", href: "/studio", id: 4 },
 ];
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
 
         {/* Nav links */}
-        <div className={`md:flex flex-col md:flex-row items-center gap-7 text-[#54F3A6] ${isMenuOpen ? "" : "hidden"}`}>
+        <div className={`sm:flex sm:flex-col sm:gap-2 md:flex md:flex-row items-center gap-7 text-[#54F3A6] ${isMenuOpen ? "" : "hidden"}`}>
           {navigation.map((item) => (
             <Link
               href={item.href}

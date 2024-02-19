@@ -10,7 +10,7 @@ interface Props {
 // taking title and children as props accessing from Logo tag in Navbar
 const Logo = ({ className, title }: Props) => {
   return (
-    <Link href={"/"}>
+    <Link href={"/contact"}>
       <h1 className={`text-3xl font-extrabold uppercase ${className}`}>
         {title || "USAMAKEEPSCODE"}
       </h1>
